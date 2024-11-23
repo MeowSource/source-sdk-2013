@@ -144,11 +144,13 @@ class LogMessageCrash : public LogMessage {
 #pragma warning(push)
 #pragma warning(disable : 4722)
 #endif
+#pragma warning(push)
+#pragma warning(disable: 4722) // Suppress destructor never returns warning
   ~LogMessageCrash() {
-	  fprintf( stderr, "\n" );
-//    cerr << endl;
-    abort();
+      fprintf(stderr, "\n");
+      abort();
   }
+#pragma warning(pop)
 };
 #if _MSC_VER == 1700 || _MSC_VER == 1800
 #pragma warning(pop)

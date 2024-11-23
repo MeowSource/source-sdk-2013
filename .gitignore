@@ -54,3 +54,5 @@ config.cfg
 # shader files
 *.tmp
 
+/sp/src/.vs
+/sp/src/.vs
