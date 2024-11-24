@@ -217,6 +217,7 @@ void bf_write::WriteSBitLong( int data, int numbits )
 	
 	AssertMsg2( nValue == data, "WriteSBitLong: 0x%08x does not fit in %d bits", data, numbits );
 
+
 	WriteUBitLong( nValue, numbits, false );
 }
 

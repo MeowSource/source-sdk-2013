@@ -1,0 +1,30 @@
+"VertexLitGeneric"
+{
+    // The base texture for the weapon
+    "$basetexture" "models/Weapons/V_physics_gun/redrotater"
+
+    // Optional detail map settings (can be removed if not used)
+    $detailscale 1
+    $detailblendfactor 1.0
+    $detailblendmode 0
+
+    // Phong shading parameters (for lighting effects)
+    "$phong" "1"
+    "$phongtint" "[0.9 0.8 0.7]"
+    "$phongboost" "0.8"
+    "$phongexponent" "6"
+    "$phongfresnelranges" "[0.3 0.6 1]"
+
+    // Rim light settings (optional, set to 0 to disable)
+    "$rimlight" "0"
+
+    // Self-illumination (glowing effect)
+    "$selfillum" "1"
+    "$selfillumtint" "[1.0 0.0 0.0]" // Default self-illumination color (red)
+
+    // The $color parameter that can be modified by C++ code
+    "$color" "[1.0 1.0 1.0]" // Default color (white)
+
+    // Other optional settings (you can remove if not needed)
+    "$translucent" "1"  // Make the weapon model translucent if necessary
+}

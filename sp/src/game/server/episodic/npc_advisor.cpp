@@ -364,7 +364,11 @@ END_SEND_TABLE()
 //-----------------------------------------------------------------------------
 void CNPC_Advisor::Spawn()
 {
+	PrecacheModel("models/advisor.mdl");
 	BaseClass::Spawn();
+
+	string_t ModelName = MAKE_STRING("models/advisor.mdl");
+	
 
 #ifdef _XBOX
 	// Always fade the corpse
@@ -373,7 +377,7 @@ void CNPC_Advisor::Spawn()
 
 	Precache();
 
-	SetModel( STRING( GetModelName() ) );
+	SetModel( STRING(ModelName) );
 
 	m_iHealth = sk_advisor_health.GetFloat();
 	m_takedamage = DAMAGE_NO;
@@ -817,7 +821,7 @@ void CNPC_Advisor::RunTask( const Task_t *pTask )
 				// swap them if necessary (1 must be the bottom)
 				if (m_levitateCallback.m_vecGoalPos1.z > m_levitateCallback.m_vecGoalPos2.z)
 				{
-					swap(m_levitateCallback.m_vecGoalPos1,m_levitateCallback.m_vecGoalPos2);
+					
 				}
 
 				m_levitateCallback.m_flFloat = 0.06f; // this is an absolute accumulation upon gravity

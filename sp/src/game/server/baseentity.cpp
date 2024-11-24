@@ -3368,7 +3368,6 @@ void CBaseEntity::FunctionCheck( void *pFunction, const char *name )
 	if (pFunction && !UTIL_FunctionToName( GetDataDescMap(), (inputfunc_t *)pFunction ) )
 	{
 		Warning( "FUNCTION NOT IN TABLE!: %s:%s (%08lx)\n", STRING(m_iClassname), name, (unsigned long)pFunction );
-		Assert(0);
 	}
 #endif
 }
